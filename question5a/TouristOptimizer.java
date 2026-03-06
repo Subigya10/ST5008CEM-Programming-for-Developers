@@ -298,6 +298,7 @@ public class TouristOptimizer extends JFrame {
                 if (matches == 0) continue;
 
                 double score = (matches * 100.0) / (s.fee + 1);
+                
                 if (score > bestScore) { bestScore = bestIdx == -1 ? score : bestScore;
                     bestScore = score; bestIdx = i; }
             }

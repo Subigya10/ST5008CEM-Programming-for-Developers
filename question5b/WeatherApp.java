@@ -33,6 +33,7 @@ public class WeatherApp extends JFrame {
 
     // ── Configuration ─────────────────────────────────────────────────────────
     private static final String API_KEY  = "a4f3701c5a7a9d5d1447f8cb9b439dd2";
+
     private static final String BASE_URL =
         "https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=metric";
 
@@ -321,6 +322,7 @@ public class WeatherApp extends JFrame {
 
                 latch.await();
                 pool.shutdown();
+                
                 parMs = System.currentTimeMillis() - parStart;
                 return null;
             }
